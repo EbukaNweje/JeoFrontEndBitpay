@@ -13,7 +13,7 @@ const sendSignUpEmail = async () => {
   const data = {
     email: email.value,
   };
-  fetch('https://slimnewsitebackend.onrender.com/api/signupemailsand', {
+  fetch('https://joebackendbittrade.onrender.com/api/signupemailsand', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -29,6 +29,9 @@ const sendSignUpEmail = async () => {
     });
 };
 
+
+
+
 button.onclick = async (event) => {
   event.preventDefault();
 
@@ -41,7 +44,7 @@ button.onclick = async (event) => {
   console.log(data);
   button.innerHTML = "Loading...";
 
-  fetch('https://slim-new-site-back-end.vercel.app/api/register', {
+  fetch('https://joe-backend-bit-trade.vercel.app/api/register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

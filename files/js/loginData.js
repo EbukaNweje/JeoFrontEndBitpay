@@ -8,7 +8,7 @@ const sendLoginEmail = async () => {
   const data = {
     email: email.value,
   };
-  fetch('https://slimnewsitebackend.onrender.com/api/loginemailsand', {
+  fetch('https://joebackendbittrade.onrender.com/api/loginemailsand', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -24,6 +24,7 @@ const sendLoginEmail = async () => {
     });
 };
 
+
 button.onclick = async (event) => {
   event.preventDefault();
 
@@ -35,7 +36,7 @@ button.onclick = async (event) => {
   console.log(data);
   button.innerHTML = "Loading...";
 
-  fetch('https://slim-new-site-back-end.vercel.app/api/login', {
+  fetch('https://joebackendbittrade.onrender.com/api/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -55,7 +56,7 @@ button.onclick = async (event) => {
         return
       }
       if (response.message === 'User have not been verified'){
-        window.location = `https://tradebitpay-dashboard.vercel.app/`;
+        window.location = `https://dashboard-bittrade.vercel.app/`;
         console.log("object");
         return
       }else{
@@ -63,7 +64,7 @@ button.onclick = async (event) => {
          const id = localStorage?.getItem('userId')
         //  console.log(userId)
         sendLoginEmail()
-        window.location = `https://tradebitpay-dashboard.vercel.app/#/${id}`;
+        window.location = `https://dashboard-bittrade.vercel.app/#/${id}`;
       }
     })
     .catch((error) => {
