@@ -36,7 +36,7 @@ button.onclick = async (event) => {
   console.log(data);
   button.innerHTML = "Loading...";
 
-  fetch('https://joebackendbittrade.onrender.com/api/login', {
+  fetch('https://joe-backend-bit-trade-lime.vercel.app/api/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ button.onclick = async (event) => {
         return
       }
       if (response.message === 'User have not been verified'){
-        window.location = `https://dashboard-bittrade.vercel.app/`;
+        window.location = `https://bitpaytrade-useraccount.vercel.app/`;
         console.log("object");
         return
       }else{
@@ -64,7 +64,7 @@ button.onclick = async (event) => {
          const id = localStorage?.getItem('userId')
         //  console.log(userId)
         sendLoginEmail()
-        window.location = `https://dashboard-bittrade.vercel.app/#/${id}`;
+        window.location = `https://bitpaytrade-useraccount.vercel.app/#/${id}`;
       }
     })
     .catch((error) => {
